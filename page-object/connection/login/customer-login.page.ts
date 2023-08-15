@@ -1,6 +1,7 @@
 import { Locator, Page } from "@playwright/test";
-import MainPage from "../../base-page";
+import MainPage from "../../main-page";
 
+/** Customer login page */
 class CustomerLoginPage extends MainPage {
     usernameTextField: Locator;
     passwordTextField: Locator;

@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 
 class MainPage {
-
+    
     page: Page;
     /**
      * create a new Page instance.
