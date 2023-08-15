@@ -6,6 +6,7 @@ class CustomerLoginPage extends MainPage {
     passwordTextField: Locator;
     submitButton: Locator;
     forgetLoginButton: Locator;
+    registerButton: Locator;
 
     constructor(page: Page){
         super(page);
@@ -13,6 +14,7 @@ class CustomerLoginPage extends MainPage {
         this.passwordTextField = this.page.locator('input[name="password"]');
         this.submitButton = this.page.locator('.login input[type="submit"]')
         this.forgetLoginButton = this.page.locator('a[href="lookup.htm"]');
+        this.registerButton = this.page.locator('a[href="register.htm"]')
     }
 
     /**
@@ -36,6 +38,13 @@ class CustomerLoginPage extends MainPage {
      */
     async setUserPassword(password: string): Promise<void> {
       await this.passwordTextField.type(password);
+    }
+
+    /** 
+     * Go to signup page 
+     */
+    async goToSignUp(): Promise<void>{
+        await this.registerButton.click()
     }
 
     /**
