@@ -25,7 +25,7 @@ class CustomerLoginPage extends MainPage {
     async setUserName(name: string): Promise<void> {
       await this.usernameTextField.type(name);
     }
-
+    
     /**
      * forget user login info.
      */
@@ -53,6 +53,15 @@ class CustomerLoginPage extends MainPage {
      */
     async submit(): Promise<void>{
       await this.submitButton.click()
+    }
+
+    /**
+     * login credential
+     */
+    async login(name: string, password: string): Promise<void>{
+      await this.setUserName(name);
+      await this.setUserPassword(password);
+      await this.submit();
     }
 }
 

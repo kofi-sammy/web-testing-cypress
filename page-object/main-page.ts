@@ -11,5 +11,4 @@ class MainPage {
       this.page = page;
     }
 }
-
 export default MainPage;
